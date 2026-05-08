@@ -65,7 +65,10 @@ _LENGTH_GUIDE = {
 
 class DraftingAgent:
     def __init__(self) -> None:
-        self.client = OpenAI(api_key=settings.openai_api_key)
+        self.client = OpenAI(
+            api_key=settings.openrouter_api_key,
+            base_url=settings.openrouter_base_url,
+        )
 
     # ── Helpers ───────────────────────────────────────────────────────────────
 

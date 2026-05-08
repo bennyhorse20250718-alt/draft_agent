@@ -3,8 +3,12 @@ from typing import List
 
 
 class Settings(BaseSettings):
-    # OpenAI
+    # OpenAI (still required for embeddings)
     openai_api_key: str = ""
+
+    # OpenRouter (used for LLM/chat completions)
+    openrouter_api_key: str = ""
+    openrouter_base_url: str = "https://openrouter.ai/api/v1"
 
     # Qdrant storage mode — three mutually exclusive options:
     #   "local"      — file-based, single machine (default)
